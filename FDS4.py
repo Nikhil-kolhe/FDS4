@@ -1,13 +1,52 @@
-balance = 0
-a=input("d-deopist, w-withdraw, Enter your operation: ")
-if a == "d":
-  d=int(input("Enter amount to Deposit: "))
-  balance +=d
-  print (f" Account balance after depositing is {d}={balance}")
-elif a == "w":
-  w=int(input("Enter amount to Withdraw: "))
-  if w>=balance:
-    balance-=w
-  print(f" Account balance after withdrawing is {w}={balance}")
-else:
-  print("Error: Enter Valid Operator! (d or w)")
+m=int(input('enter m'))
+n=int(input('enter n'))
+
+a=[]
+b=[]
+d=[]
+    
+for i in range(m):
+    col = []
+    for j in range(n):
+            num=int(input('enter the numbers'))
+            col.append(num)
+    a.append(col)
+print(a)
+
+for i in range(m):
+    col = []
+    for j in range(n):
+            num=int(input('enter the numbers'))
+            col.append(num)
+    b.append(col)
+print(b)
+for i in range(m):
+    col=[]
+    for j in range(n):
+      col.append(0)
+    d.append(col)
+def add():
+
+            for i in range (m):
+                for j in range(n):
+                        d[i][j]=a[i][j]+b[i][j]
+            for r in d:
+                print("The sum is",d)
+def sub():
+            for i in range (m):
+                for j in range(n):
+                        d[i][j]=a[i][j]-b[i][j]
+            for r in d:
+                print("the diff is",d)
+def multiply():
+        for i in range(len(a)):  
+            for j in range(len(b[0])): 
+                for k in range(len(b)):
+                    d[i][j]+=(a[i][k] *b[k][j]  )
+        for r in d:
+            print(d)
+
+ 
+add()      
+sub()
+multiply()
